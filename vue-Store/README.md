@@ -1,4 +1,4 @@
-# vuedemo3
+# Vue 商城开发
 
 > A Vue.js project
 
