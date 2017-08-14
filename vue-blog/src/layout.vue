@@ -4,36 +4,47 @@
       <div class="header-main">
         <div class="logo">LEARNER</div>
         <ul class="nav">
-          <li><a href="http://www.baidu.com">HOME</a></li>
-          <li><a href="http://www.baidu.com">PROJECT</a></li>
-          <li><a href="http://www.baidu.com">ABOUT</a></li>
-          <li><a href="http://www.baidu.com">BLOG</a></li>
-          <li><a href="http://www.baidu.com">CONTACT</a></li>
+          <li><router-link :to="{path:'index'}">HOME</router-link></li>
+          <li><router-link :to="{path:'project'}">PROJECT</router-link></li>
+          <li><router-link :to="{path:'todo'}">ABOUT</router-link></li>
+          <li><router-link :to="{path:'todolist'}">BLOG</router-link></li>
+          <li><router-link :to="{path:'newslist'}">CONTACT</router-link></li>
         </ul>
         <div class="login">
-          <button class="login-in">LOGIN IN</button>
+          <button class="login-in" @click="loginClick">LOGIN IN</button>
           <button class="sign-up">SIGN UP</button>
         </div>
       </div>
     </div>
     <div class="app-container">
-      <slideshow></slideshow>
-      <todo></todo>
-      <newslist></newslist>
+      <keep-alive>
+        <router-view></router-view>
+      </keep-alive>
     </div>
     <div class="app-footer">Copyright © 优站精选 | 京ICP备11008151号</div>
+    <!-- <dialogs :is-show="isShowDialog">
+      <p>other word</p>
+
+    </dialogs> -->
   </div>
 </template>
 
 <script>
-import slideshow from './components/slideshow'
-import todo from './components/todo'
-import newslist from './components/newslist'
+
+// import dialogs from './components/dialog'
 export default {
-  components: {
-    slideshow,
-    todo,
-    newslist
+  // components:{
+  //   dialogs
+  // },
+  data(){
+    return{
+      isShowDialog:false
+    }
+  },
+  methods:{
+    loginClick(){
+      this.isShowDialog = true
+    }
   }
 }
 </script>
