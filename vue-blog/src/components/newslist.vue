@@ -23,22 +23,22 @@
           {
             title:'SED PORTA DOLOR',
             description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dolorem, necessitatibus rem. Minus deleniti animi itaque culpa debitis.',
-            src:'https://unsplash.it/227/200?image=4'
+            src:require('../assets/images/1.jpeg')
           },
           {
             title:'SED PORTA DOLOR',
             description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dolorem, necessitatibus rem. Minus deleniti animi itaque culpa debitis.',
-            src:'https://unsplash.it/227/200?image=3'
+            src:require('../assets/images/2.jpeg')
           },
           {
             title:'SED PORTA DOLOR',
             description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dolorem, necessitatibus rem. Minus deleniti animi itaque culpa debitis.',
-            src:'https://unsplash.it/227/200?image=2'
+            src:require('../assets/images/3.jpeg')
           },
           {
             title:'SED PORTA DOLOR',
             description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dolorem, necessitatibus rem. Minus deleniti animi itaque culpa debitis.',
-            src:'https://unsplash.it/227/200?image=1'
+            src:require('../assets/images/4.jpeg')
           }
         ]
       }
@@ -74,6 +74,7 @@
     img{
       width: 80%;
       height: 100%;
+      background-size:100% 100%;
     }
   }
   .news-main{

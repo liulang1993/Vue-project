@@ -9,8 +9,15 @@ import todo from './components/todo'
 import slideshow from './components/slideshow'
 import todolist from './components/todolist'
 import newslist from './components/newslist'
+import table from './components/table'
+import froms from './components/froms'
+import list from './components/list'
+import signup from './components/signup'
+import loginin from './components/loginin'
 
 Vue.use(VueRouter)
+// Vue.use(VueX)
+
 
 let router = new VueRouter({
   mode:'history',
@@ -29,7 +36,21 @@ let router = new VueRouter({
     },
     {
       path:'/project',
-      component:project
+      component:project,
+      children:[
+        {
+          path:'/table',
+          component:table
+        },
+        {
+          path:'/froms',
+          component:froms
+        },
+        {
+          path:'/list',
+          component:list
+        }
+      ]
     },
     {
       path:'/todolist',
@@ -38,7 +59,16 @@ let router = new VueRouter({
     {
       path:'/newslist',
       component:newslist
+    },
+    {
+      path:'/signup',
+      component:signup
+    },
+    {
+      path:'/loginin',
+      component:loginin
     }
+
   ]
 })
 Vue.config.productionTip = false

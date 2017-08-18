@@ -19,22 +19,22 @@
           {
             title:'image',
             des:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. ',
-            src:'https://unsplash.it/1154/500?image=4'
+            src:require('../assets/images/bgimg1.jpeg')
           },
           {
             title:'image',
             des:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. ',
-            src:'https://unsplash.it/1154/500?image=3'
+            src:require('../assets/images/bgimg2.jpeg')
           },
           {
             title:'image',
             des:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. ',
-            src:'https://unsplash.it/1154/500?image=2'
+            src:require('../assets/images/bgimg3.jpeg')
           },
           {
             title:'image',
             des:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. ',
-            src:'https://unsplash.it/1154/500?image=1'
+            src:require('../assets/images/bgimg4.jpeg')
           }
         ]
       }
@@ -105,6 +105,7 @@
     width: 1154px;
     height: 500px;
     float: left;
+    background-size: 100% 100%;
   }
   .arrow{
     width: 30px;

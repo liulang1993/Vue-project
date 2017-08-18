@@ -1,9 +1,9 @@
 <template>
   <div>
-    <div class="dialog-wrap" v-if="isShow">
-    <div class="dialog-cover"</div>
+    <div class="dialog-wrap">
+    <div class="dialog-cover"></div>
       <div class="dialog-content">
-        <p class="dialog-close">x</p>
+        <p class="dialog-close" @click="on-close">x</p>
         <slot>empty</slot>
       </div>
     </div>
@@ -13,9 +13,9 @@
 <script>
   export default {
     props:{
-      isShow: {
-        type: Boolean,
-        default: false
+      isShow:{
+        type:Boolean,
+        default:false
       }
     },
     data(){
@@ -24,7 +24,9 @@
       }
     },
     methods:{
-
+      closeDialog (){
+        this.$emit('on-close')
+      }
     }
   }
 </script>
@@ -66,10 +68,12 @@
   background: #fff;
   top: 20%;
   left: 50%;
+  /* display: none; */
   margin-left: -25%;
   z-index: 10;
   border: 2px solid #464068;
   padding: 2%;
+  color: black;
   line-height: 1.6;
 }
 .dialog-close {

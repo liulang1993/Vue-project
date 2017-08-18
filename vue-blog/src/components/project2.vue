@@ -3,9 +3,9 @@
     <div class="formNav">
       <ul class="form-list">
         <h2>Project Menu</h2>
-        <router-link v-for="item in menu" :to="{path: item.path}" tag="li" active-class="active">
-          {{ item.name }}
-         </router-link>
+        <li><router-link :to="{path:'table'}">Table</router-link></li>
+        <li><router-link :to="{path:'froms'}">Form</router-link></li>
+        <li><router-link :to="{path:'list'}">List</router-link></li>
       </ul>
       <div class="form-content">
         <keep-alive>

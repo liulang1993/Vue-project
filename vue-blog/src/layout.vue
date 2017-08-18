@@ -11,8 +11,8 @@
           <li><router-link :to="{path:'newslist'}">CONTACT</router-link></li>
         </ul>
         <div class="login">
-          <button class="login-in" @click="loginClick">LOGIN IN</button>
-          <button class="sign-up">SIGN UP</button>
+          <router-link :to="{path:'loginin'}">LOGIN IN</router-link>
+          <router-link :to="{path:'signup'}">SIGN UP</router-link>
         </div>
       </div>
     </div>
@@ -22,31 +22,13 @@
       </keep-alive>
     </div>
     <div class="app-footer">Copyright © 优站精选 | 京ICP备11008151号</div>
-    <!-- <dialogs :is-show="isShowDialog">
-      <p>other word</p>
-
-    </dialogs> -->
   </div>
 </template>
 
 <script>
+  export default {
 
-// import dialogs from './components/dialog'
-export default {
-  // components:{
-  //   dialogs
-  // },
-  data(){
-    return{
-      isShowDialog:false
-    }
-  },
-  methods:{
-    loginClick(){
-      this.isShowDialog = true
-    }
   }
-}
 </script>
 
 <style scoped lang="less">
@@ -103,9 +85,12 @@ export default {
     width: 20%;
     height: 100%;
     float: right;
-    button{
-      width: 45%;
+    a{
+      width: 44%;
       height: 40px;
+      line-height: 40px;
+      text-align: center;
+      text-decoration: none;
       border: 1px solid #fff;
       border-radius: 5px;
       margin-left: 5%;
