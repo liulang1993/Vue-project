@@ -37,6 +37,7 @@ let router = new VueRouter({
     {
       path:'/project',
       component:project,
+      redirect:'/table',
       children:[
         {
           path:'/table',

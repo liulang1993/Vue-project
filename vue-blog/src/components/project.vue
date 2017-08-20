@@ -96,7 +96,7 @@
     width: 84%;
     margin-left: 1%;
     background: #fff;
-    height: 600px;
+    height: 625px;
   }
   .router-link-active{
     background: #333;
